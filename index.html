@@ -13,5 +13,24 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1345805861011709&ev=PageView&noscript=1"
-/></noscript>
+</noscript>
 <!-- End Meta Pixel Code -->
+
+<body>
+    <h1>My Pixel Testing Page</h1>
+    <p>I am practicing tracking button clicks!</p>
+
+    <!-- 1. THIS IS THE BUTTON WE WANT TO TRACK -->
+    <button id="trackButton" style="padding: 10px 20px; font-size: 16px; background-color: green; color: white; border: none; cursor: pointer; margin-top: 10px;">
+        Click Me!
+    </button>
+
+    <!-- 2. THIS SCRIPT SENDS THE TRACKING EVENT TO META WHEN CLICKED -->
+    <script>
+        document.getElementById('trackButton').addEventListener('click', function() {
+            fbq('track', 'Contact'); 
+            alert('Button clicked! Check your Meta Events Manager tab.');
+        });
+    </script>
+</body>
+
